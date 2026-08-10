@@ -1,0 +1,400 @@
+Evaluator worker concurrency (PF_WORKER_COUNT): 2
+✓ Tracing enabled → Application Insights (content recording ON).
+2026-08-04 14:50:37 +0000 123561292674752 execution          WARNING  [NodeInfo(run_id='build_target__locals__target_20260804_145037_601002', node_name='Flex', line_number=0)] stderr> /workspaces/microhack-aiagents/src/kb_setup.py:120: ExperimentalWarning: [FOUNDRY_TOOLS] RawFoundryChatClient.get_azure_ai_search_tool is experimental and may change or be removed in future versions without notice.
+2026-08-04 14:50:43 +0000 123561301067456 execution.bulk     INFO     Finished 1 / 16 lines.
+2026-08-04 14:50:43 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 5.85 seconds. Estimated time for incomplete lines: 87.75 seconds.
+2026-08-04 14:50:50 +0000 123561301067456 execution.bulk     INFO     Finished 2 / 16 lines.
+2026-08-04 14:50:50 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 6.21 seconds. Estimated time for incomplete lines: 86.94 seconds.
+2026-08-04 14:50:53 +0000 123561301067456 execution.bulk     INFO     Finished 3 / 16 lines.
+2026-08-04 14:50:53 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 5.17 seconds. Estimated time for incomplete lines: 67.21 seconds.
+2026-08-04 14:50:56 +0000 123561301067456 execution.bulk     INFO     Finished 4 / 16 lines.
+2026-08-04 14:50:56 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 4.65 seconds. Estimated time for incomplete lines: 55.8 seconds.
+2026-08-04 14:50:59 +0000 123561301067456 execution.bulk     INFO     Finished 5 / 16 lines.
+2026-08-04 14:50:59 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 4.42 seconds. Estimated time for incomplete lines: 48.62 seconds.
+2026-08-04 14:51:02 +0000 123561301067456 execution.bulk     INFO     Finished 6 / 16 lines.
+2026-08-04 14:51:02 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 4.19 seconds. Estimated time for incomplete lines: 41.9 seconds.
+2026-08-04 14:51:06 +0000 123561301067456 execution.bulk     INFO     Finished 7 / 16 lines.
+2026-08-04 14:51:06 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 4.11 seconds. Estimated time for incomplete lines: 36.99 seconds.
+2026-08-04 14:51:10 +0000 123561301067456 execution.bulk     INFO     Finished 8 / 16 lines.
+2026-08-04 14:51:10 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 4.06 seconds. Estimated time for incomplete lines: 32.48 seconds.
+2026-08-04 14:51:12 +0000 123561301067456 execution.bulk     INFO     Finished 9 / 16 lines.
+2026-08-04 14:51:12 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 3.86 seconds. Estimated time for incomplete lines: 27.02 seconds.
+2026-08-04 14:51:16 +0000 123561301067456 execution.bulk     INFO     Finished 10 / 16 lines.
+2026-08-04 14:51:16 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 3.94 seconds. Estimated time for incomplete lines: 23.64 seconds.
+2026-08-04 14:51:22 +0000 123561301067456 execution.bulk     INFO     Finished 11 / 16 lines.
+2026-08-04 14:51:22 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 4.1 seconds. Estimated time for incomplete lines: 20.5 seconds.
+2026-08-04 14:51:25 +0000 123561301067456 execution.bulk     INFO     Finished 12 / 16 lines.
+2026-08-04 14:51:25 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 3.97 seconds. Estimated time for incomplete lines: 15.88 seconds.
+2026-08-04 14:51:28 +0000 123561301067456 execution.bulk     INFO     Finished 13 / 16 lines.
+2026-08-04 14:51:28 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 3.92 seconds. Estimated time for incomplete lines: 11.76 seconds.
+2026-08-04 14:51:31 +0000 123561301067456 execution.bulk     INFO     Finished 14 / 16 lines.
+2026-08-04 14:51:31 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 3.86 seconds. Estimated time for incomplete lines: 7.72 seconds.
+2026-08-04 14:51:37 +0000 123561301067456 execution.bulk     INFO     Finished 15 / 16 lines.
+2026-08-04 14:51:37 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 3.99 seconds. Estimated time for incomplete lines: 3.99 seconds.
+2026-08-04 14:51:41 +0000 123561301067456 execution.bulk     INFO     Finished 16 / 16 lines.
+2026-08-04 14:51:41 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 3.97 seconds. Estimated time for incomplete lines: 0.0 seconds.
+======= Run Summary =======
+
+Run name: "build_target__locals__target_20260804_145037_601002"
+Run status: "Completed"
+Start time: "2026-08-04 14:50:37.601002+00:00"
+Duration: "0:01:04.071483"
+
+2026-08-04 14:51:45 +0000 123561301067456 execution.bulk     INFO     Finished 1 / 16 lines.
+2026-08-04 14:51:45 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 4.02 seconds. Estimated time for incomplete lines: 60.3 seconds.
+2026-08-04 14:51:46 +0000 123561301067456 execution.bulk     INFO     Finished 2 / 16 lines.
+2026-08-04 14:51:46 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 2.32 seconds. Estimated time for incomplete lines: 32.48 seconds.
+2026-08-04 14:51:46 +0000 123561292674752 execution.bulk     INFO     Finished 1 / 16 lines.
+2026-08-04 14:51:46 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 5.3 seconds. Estimated time for incomplete lines: 79.5 seconds.
+2026-08-04 14:51:48 +0000 123561292674752 execution.bulk     INFO     Finished 2 / 16 lines.
+2026-08-04 14:51:48 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 3.29 seconds. Estimated time for incomplete lines: 46.06 seconds.
+2026-08-04 14:51:48 +0000 123561301067456 execution.bulk     INFO     Finished 3 / 16 lines.
+2026-08-04 14:51:48 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 2.41 seconds. Estimated time for incomplete lines: 31.33 seconds.
+2026-08-04 14:51:49 +0000 123561301067456 execution.bulk     INFO     Finished 4 / 16 lines.
+2026-08-04 14:51:49 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.98 seconds. Estimated time for incomplete lines: 23.76 seconds.
+2026-08-04 14:51:49 +0000 123561292674752 execution.bulk     INFO     Finished 3 / 16 lines.
+2026-08-04 14:51:49 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.76 seconds. Estimated time for incomplete lines: 35.88 seconds.
+2026-08-04 14:51:52 +0000 123561301067456 execution.bulk     INFO     Finished 5 / 16 lines.
+2026-08-04 14:51:52 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 2.08 seconds. Estimated time for incomplete lines: 22.88 seconds.
+2026-08-04 14:51:52 +0000 123561292674752 execution.bulk     INFO     Finished 4 / 16 lines.
+2026-08-04 14:51:52 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.7 seconds. Estimated time for incomplete lines: 32.4 seconds.
+2026-08-04 14:51:52 +0000 123561301067456 execution.bulk     INFO     Finished 6 / 16 lines.
+2026-08-04 14:51:52 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.88 seconds. Estimated time for incomplete lines: 18.8 seconds.
+2026-08-04 14:51:53 +0000 123561292674752 execution.bulk     INFO     Finished 5 / 16 lines.
+2026-08-04 14:51:53 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.37 seconds. Estimated time for incomplete lines: 26.07 seconds.
+2026-08-04 14:51:55 +0000 123561301067456 execution.bulk     INFO     Finished 7 / 16 lines.
+2026-08-04 14:51:55 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.95 seconds. Estimated time for incomplete lines: 17.55 seconds.
+2026-08-04 14:51:56 +0000 123561301067456 execution.bulk     INFO     Finished 8 / 16 lines.
+2026-08-04 14:51:56 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.84 seconds. Estimated time for incomplete lines: 14.72 seconds.
+2026-08-04 14:51:57 +0000 123561301067456 execution.bulk     INFO     Finished 9 / 16 lines.
+2026-08-04 14:51:57 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.76 seconds. Estimated time for incomplete lines: 12.32 seconds.
+2026-08-04 14:51:57 +0000 123561292674752 execution.bulk     INFO     Finished 6 / 16 lines.
+2026-08-04 14:51:57 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.68 seconds. Estimated time for incomplete lines: 26.8 seconds.
+2026-08-04 14:51:58 +0000 123561292674752 execution.bulk     INFO     Finished 7 / 16 lines.
+2026-08-04 14:51:58 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.42 seconds. Estimated time for incomplete lines: 21.78 seconds.
+2026-08-04 14:51:58 +0000 123561301067456 execution.bulk     INFO     Finished 10 / 16 lines.
+2026-08-04 14:51:58 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.71 seconds. Estimated time for incomplete lines: 10.26 seconds.
+2026-08-04 14:51:59 +0000 123561301067456 execution.bulk     INFO     Finished 11 / 16 lines.
+2026-08-04 14:51:59 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.66 seconds. Estimated time for incomplete lines: 8.3 seconds.
+2026-08-04 14:52:02 +0000 123561292674752 execution.bulk     INFO     Finished 8 / 16 lines.
+2026-08-04 14:52:02 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.58 seconds. Estimated time for incomplete lines: 20.64 seconds.
+2026-08-04 14:52:02 +0000 123561301067456 execution.bulk     INFO     Finished 12 / 16 lines.
+2026-08-04 14:52:02 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.73 seconds. Estimated time for incomplete lines: 6.92 seconds.
+2026-08-04 14:52:03 +0000 123561292674752 execution.bulk     INFO     Finished 9 / 16 lines.
+2026-08-04 14:52:03 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.42 seconds. Estimated time for incomplete lines: 16.94 seconds.
+2026-08-04 14:52:03 +0000 123561301067456 execution.bulk     INFO     Finished 13 / 16 lines.
+2026-08-04 14:52:03 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.69 seconds. Estimated time for incomplete lines: 5.07 seconds.
+2026-08-04 14:52:04 +0000 123561292674752 azure.ai.evaluation._legacy.prompty._prompty WARNING  [0/10] AsyncAzureOpenAI request failed. RateLimitError: Error code: 429 - {'error': {'message': 'Your requests to gpt-5.4 for gpt-5.4 in swedencentral have exceeded rate limit.', 'type': 'too_many_requests', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying in 30.000000 seconds.
+Traceback (most recent call last):
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/azure/ai/evaluation/_legacy/prompty/_prompty.py", line 401, in _send_with_retries
+    response = await client.chat.completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/azure/ai/evaluation/_legacy/_batch_engine/_openai_injector.py", line 50, in async_wrapper
+    result: _WithUsage = await method(*args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2907, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1992, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1777, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Your requests to gpt-5.4 for gpt-5.4 in swedencentral have exceeded rate limit.', 'type': 'too_many_requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-08-04 14:52:06 +0000 123561301067456 execution.bulk     INFO     Finished 14 / 16 lines.
+2026-08-04 14:52:06 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.76 seconds. Estimated time for incomplete lines: 3.52 seconds.
+2026-08-04 14:52:06 +0000 123561301067456 execution.bulk     INFO     Finished 15 / 16 lines.
+2026-08-04 14:52:06 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.68 seconds. Estimated time for incomplete lines: 1.68 seconds.
+2026-08-04 14:52:08 +0000 123561301067456 execution.bulk     INFO     Finished 16 / 16 lines.
+2026-08-04 14:52:08 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 1.68 seconds. Estimated time for incomplete lines: 0.0 seconds.
+======= Run Summary =======
+
+Run name: "relevance_20260804_145141_689382"
+Run status: "Completed"
+Start time: "2026-08-04 14:51:41.689382+00:00"
+Duration: "0:00:27.188326"
+
+2026-08-04 14:52:09 +0000 123561292674752 execution.bulk     INFO     Finished 10 / 16 lines.
+2026-08-04 14:52:09 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.8 seconds. Estimated time for incomplete lines: 16.8 seconds.
+2026-08-04 14:52:10 +0000 123561301067456 azure.ai.evaluation._legacy.prompty._prompty WARNING  [0/10] AsyncAzureOpenAI request failed. RateLimitError: Error code: 429 - {'error': {'message': 'Your requests to gpt-5.4 for gpt-5.4 in swedencentral have exceeded rate limit.', 'type': 'too_many_requests', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying in 30.000000 seconds.
+Traceback (most recent call last):
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/azure/ai/evaluation/_legacy/prompty/_prompty.py", line 401, in _send_with_retries
+    response = await client.chat.completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/azure/ai/evaluation/_legacy/_batch_engine/_openai_injector.py", line 50, in async_wrapper
+    result: _WithUsage = await method(*args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2907, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1992, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1777, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Your requests to gpt-5.4 for gpt-5.4 in swedencentral have exceeded rate limit.', 'type': 'too_many_requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-08-04 14:52:10 +0000 123561292674752 azure.ai.evaluation._legacy.prompty._prompty WARNING  [0/10] AsyncAzureOpenAI request failed. RateLimitError: Error code: 429 - {'error': {'message': 'Your requests to gpt-5.4 for gpt-5.4 in swedencentral have exceeded rate limit.', 'type': 'too_many_requests', 'param': None, 'code': 'rate_limit_exceeded'}}. Retrying in 30.000000 seconds.
+Traceback (most recent call last):
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/azure/ai/evaluation/_legacy/prompty/_prompty.py", line 401, in _send_with_retries
+    response = await client.chat.completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/azure/ai/evaluation/_legacy/_batch_engine/_openai_injector.py", line 50, in async_wrapper
+    result: _WithUsage = await method(*args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2907, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1992, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/microhack-aiagents/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1777, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Your requests to gpt-5.4 for gpt-5.4 in swedencentral have exceeded rate limit.', 'type': 'too_many_requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2026-08-04 14:52:39 +0000 123561292674752 execution.bulk     INFO     Finished 11 / 16 lines.
+2026-08-04 14:52:39 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 5.23 seconds. Estimated time for incomplete lines: 26.15 seconds.
+2026-08-04 14:52:45 +0000 123561292674752 execution.bulk     INFO     Finished 12 / 16 lines.
+2026-08-04 14:52:45 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 5.29 seconds. Estimated time for incomplete lines: 21.16 seconds.
+2026-08-04 14:52:45 +0000 123561292674752 execution.bulk     INFO     Finished 13 / 16 lines.
+2026-08-04 14:52:45 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 4.93 seconds. Estimated time for incomplete lines: 14.79 seconds.
+2026-08-04 14:52:48 +0000 123561292674752 execution.bulk     INFO     Finished 14 / 16 lines.
+2026-08-04 14:52:48 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 4.81 seconds. Estimated time for incomplete lines: 9.62 seconds.
+2026-08-04 14:52:50 +0000 123561292674752 execution.bulk     INFO     Finished 15 / 16 lines.
+2026-08-04 14:52:50 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 4.58 seconds. Estimated time for incomplete lines: 4.58 seconds.
+2026-08-04 14:52:53 +0000 123561292674752 execution.bulk     INFO     Finished 16 / 16 lines.
+2026-08-04 14:52:53 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 4.46 seconds. Estimated time for incomplete lines: 0.0 seconds.
+======= Run Summary =======
+
+Run name: "groundedness_20260804_145141_685266"
+Run status: "Completed"
+Start time: "2026-08-04 14:51:41.685266+00:00"
+Duration: "0:01:11.841073"
+
+2026-08-04 14:52:56 +0000 123561292674752 execution.bulk     INFO     Finished 1 / 16 lines.
+2026-08-04 14:52:56 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 3.23 seconds. Estimated time for incomplete lines: 48.45 seconds.
+2026-08-04 14:52:57 +0000 123561292674752 execution.bulk     INFO     Finished 2 / 16 lines.
+2026-08-04 14:52:57 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.1 seconds. Estimated time for incomplete lines: 29.4 seconds.
+2026-08-04 14:52:59 +0000 123561292674752 execution.bulk     INFO     Finished 3 / 16 lines.
+2026-08-04 14:52:59 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.96 seconds. Estimated time for incomplete lines: 25.48 seconds.
+2026-08-04 14:53:01 +0000 123561292674752 execution.bulk     INFO     Finished 4 / 16 lines.
+2026-08-04 14:53:01 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.93 seconds. Estimated time for incomplete lines: 23.16 seconds.
+2026-08-04 14:53:02 +0000 123561292674752 execution.bulk     INFO     Finished 5 / 16 lines.
+2026-08-04 14:53:02 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.74 seconds. Estimated time for incomplete lines: 19.14 seconds.
+2026-08-04 14:53:03 +0000 123561292674752 execution.bulk     INFO     Finished 6 / 16 lines.
+2026-08-04 14:53:03 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.73 seconds. Estimated time for incomplete lines: 17.3 seconds.
+2026-08-04 14:53:05 +0000 123561292674752 execution.bulk     INFO     Finished 7 / 16 lines.
+2026-08-04 14:53:05 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.65 seconds. Estimated time for incomplete lines: 14.85 seconds.
+2026-08-04 14:53:06 +0000 123561292674752 execution.bulk     INFO     Finished 8 / 16 lines.
+2026-08-04 14:53:06 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.58 seconds. Estimated time for incomplete lines: 12.64 seconds.
+2026-08-04 14:53:07 +0000 123561292674752 execution.bulk     INFO     Finished 9 / 16 lines.
+2026-08-04 14:53:07 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.58 seconds. Estimated time for incomplete lines: 11.06 seconds.
+2026-08-04 14:53:10 +0000 123561292674752 execution.bulk     INFO     Finished 10 / 16 lines.
+2026-08-04 14:53:10 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.67 seconds. Estimated time for incomplete lines: 10.02 seconds.
+2026-08-04 14:53:14 +0000 123561301067456 execution.bulk     INFO     Finished 1 / 16 lines.
+2026-08-04 14:53:14 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 65.26 seconds. Estimated time for incomplete lines: 978.9 seconds.
+2026-08-04 14:53:15 +0000 123561292674752 execution.bulk     INFO     Finished 11 / 16 lines.
+2026-08-04 14:53:15 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 1.97 seconds. Estimated time for incomplete lines: 9.85 seconds.
+2026-08-04 14:53:17 +0000 123561301067456 execution.bulk     INFO     Finished 2 / 16 lines.
+2026-08-04 14:53:17 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 34.09 seconds. Estimated time for incomplete lines: 477.26 seconds.
+2026-08-04 14:53:18 +0000 123561292674752 execution.bulk     INFO     Finished 12 / 16 lines.
+2026-08-04 14:53:18 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.08 seconds. Estimated time for incomplete lines: 8.32 seconds.
+2026-08-04 14:53:20 +0000 123561301067456 execution.bulk     INFO     Finished 3 / 16 lines.
+2026-08-04 14:53:20 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 23.79 seconds. Estimated time for incomplete lines: 309.27 seconds.
+2026-08-04 14:53:21 +0000 123561292674752 execution.bulk     INFO     Finished 13 / 16 lines.
+2026-08-04 14:53:21 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.14 seconds. Estimated time for incomplete lines: 6.42 seconds.
+2026-08-04 14:53:24 +0000 123561292674752 execution.bulk     INFO     Finished 14 / 16 lines.
+2026-08-04 14:53:24 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.19 seconds. Estimated time for incomplete lines: 4.38 seconds.
+2026-08-04 14:53:25 +0000 123561292674752 execution.bulk     INFO     Finished 15 / 16 lines.
+2026-08-04 14:53:25 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.15 seconds. Estimated time for incomplete lines: 2.15 seconds.
+2026-08-04 14:53:26 +0000 123561292674752 execution.bulk     INFO     Finished 16 / 16 lines.
+2026-08-04 14:53:26 +0000 123561292674752 execution.bulk     INFO     Average execution time for completed lines: 2.06 seconds. Estimated time for incomplete lines: 0.0 seconds.
+======= Run Summary =======
+
+Run name: "fluency_20260804_145253_530825"
+Run status: "Completed"
+Start time: "2026-08-04 14:52:53.530825+00:00"
+Duration: "0:00:33.482670"
+
+2026-08-04 14:54:17 +0000 123561301067456 execution.bulk     INFO     Finished 4 / 16 lines.
+2026-08-04 14:54:17 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 32.17 seconds. Estimated time for incomplete lines: 386.04 seconds.
+2026-08-04 14:54:20 +0000 123561301067456 execution.bulk     INFO     Finished 5 / 16 lines.
+2026-08-04 14:54:20 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 26.32 seconds. Estimated time for incomplete lines: 289.52 seconds.
+2026-08-04 14:54:23 +0000 123561301067456 execution.bulk     INFO     Finished 6 / 16 lines.
+2026-08-04 14:54:23 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 22.47 seconds. Estimated time for incomplete lines: 224.7 seconds.
+2026-08-04 14:54:26 +0000 123561301067456 execution.bulk     INFO     Finished 7 / 16 lines.
+2026-08-04 14:54:26 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 19.72 seconds. Estimated time for incomplete lines: 177.48 seconds.
+2026-08-04 14:54:29 +0000 123561301067456 execution.bulk     INFO     Finished 8 / 16 lines.
+2026-08-04 14:54:29 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 17.6 seconds. Estimated time for incomplete lines: 140.8 seconds.
+2026-08-04 14:54:32 +0000 123561301067456 execution.bulk     INFO     Finished 9 / 16 lines.
+2026-08-04 14:54:32 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 16.01 seconds. Estimated time for incomplete lines: 112.07 seconds.
+2026-08-04 14:54:35 +0000 123561301067456 execution.bulk     INFO     Finished 10 / 16 lines.
+2026-08-04 14:54:35 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 14.71 seconds. Estimated time for incomplete lines: 88.26 seconds.
+2026-08-04 14:54:39 +0000 123561301067456 execution.bulk     INFO     Finished 11 / 16 lines.
+2026-08-04 14:54:39 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 13.65 seconds. Estimated time for incomplete lines: 68.25 seconds.
+2026-08-04 14:54:42 +0000 123561301067456 execution.bulk     INFO     Finished 12 / 16 lines.
+2026-08-04 14:54:42 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 12.81 seconds. Estimated time for incomplete lines: 51.24 seconds.
+2026-08-04 14:55:15 +0000 123561301067456 execution.bulk     INFO     Finished 13 / 16 lines.
+2026-08-04 14:55:15 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 14.36 seconds. Estimated time for incomplete lines: 43.08 seconds.
+2026-08-04 14:56:15 +0000 123561301067456 execution.bulk     INFO     Finished 14 / 16 lines.
+2026-08-04 14:56:15 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 17.65 seconds. Estimated time for incomplete lines: 35.3 seconds.
+2026-08-04 14:56:18 +0000 123561301067456 execution.bulk     INFO     Finished 15 / 16 lines.
+2026-08-04 14:56:18 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 16.64 seconds. Estimated time for incomplete lines: 16.64 seconds.
+2026-08-04 14:56:42 +0000 123561301067456 execution.bulk     INFO     Finished 16 / 16 lines.
+2026-08-04 14:56:42 +0000 123561301067456 execution.bulk     INFO     Average execution time for completed lines: 17.1 seconds. Estimated time for incomplete lines: 0.0 seconds.
+======= Run Summary =======
+
+Run name: "coherence_20260804_145208_878891"
+Run status: "Completed"
+Start time: "2026-08-04 14:52:08.878891+00:00"
+Duration: "0:04:33.618034"
+
+======= Combined Run Summary (Per Evaluator) =======
+
+{
+    "groundedness": {
+        "status": "Completed",
+        "duration": "0:01:11.841073",
+        "completed_lines": 16,
+        "failed_lines": 0,
+        "log_path": null,
+        "per_line_errors": {},
+        "error_message": null,
+        "error_code": null
+    },
+    "relevance": {
+        "status": "Completed",
+        "duration": "0:00:27.188326",
+        "completed_lines": 16,
+        "failed_lines": 0,
+        "log_path": null,
+        "per_line_errors": {},
+        "error_message": null,
+        "error_code": null
+    },
+    "coherence": {
+        "status": "Completed",
+        "duration": "0:04:33.618034",
+        "completed_lines": 16,
+        "failed_lines": 0,
+        "log_path": null,
+        "per_line_errors": {},
+        "error_message": null,
+        "error_code": null
+    },
+    "fluency": {
+        "status": "Completed",
+        "duration": "0:00:33.482670",
+        "completed_lines": 16,
+        "failed_lines": 0,
+        "log_path": null,
+        "per_line_errors": {},
+        "error_message": null,
+        "error_code": null
+    }
+}
+
+====================================================
+
+
+--- Per-row groundedness (--explain) ---
+    GATED rows (grounded_qa + clause_risk) drive the quality gate.
+
+[ 1] GATED  category=grounded_qa  groundedness=2.0
+     Q: What are Contoso's standard payment terms in an MSA?
+     A: Contoso’s approved MSA template sets payment terms at **Net 60**: Contoso pays **undisputed invoices within sixty (60) days of receipt**, and **late payments accrue interest at 1% per month**【5:1†source】. The approved SOW template is aligned to the same standa
+     judge: Let's think step by step: The context states that the MSA template clause 2 and Standard Clause Library CL-01 set standard payment terms at Net 60 from receipt of an undisputed invoice, with an acceptable range of Net 45 to Net 75. The response correctly includes the Net 60 term and specifies payment of undisputed invo
+
+[ 2] GATED  category=grounded_qa  groundedness=2.0
+     Q: How does Contoso's standard limitation of liability clause work?
+     A: Contoso’s standard limitation of liability position, in the clause library, is: - a liability cap equal to the fees paid in the trailing 12 months, and - carve-outs for confidentiality, IP infringement, and indemnification【5:0†source】. In practical terms, that
+     judge: Let's think step by step: the context provides only a concise statement of the standard clause position: Standard Clause Library CL-02 and MSA clause 6 set a liability cap equal to trailing 12 months' fees, with carve-outs for confidentiality, IP infringement, and indemnification. The response correctly repeats that co
+
+[ 3] GATED  category=grounded_qa  groundedness=2.0
+     Q: What governing law does Contoso use by default?
+     A: Contoso’s default governing law is the **State of Washington, USA** under the standard clause library【5:0†source】. The approved NDA and MSA templates also use **State of Washington, USA** as their governing law【5:3†source】【5:4†source】. If you want, I can also 
+     judge: Let's think step by step: The response correctly identifies the standard governing law as the State of Washington, USA, which is directly supported by the context. However, the context also states that acceptable alternatives are Delaware, New York, and England & Wales, and the response omits these key details. It also
+
+[ 4] GATED  category=grounded_qa  groundedness=4.0
+     Q: How much notice is required to stop an MSA from auto-renewing?
+     A: Under the approved Contoso MSA template, either party must give ninety (90) days’ written notice of non-renewal to stop auto-renewal【5:0†source】. Contoso’s contracting policy is consistent with that timing, noting that auto-renewing contracts are reviewed 90 d
+     judge: Let's think step by step: The context states two specific points: (1) there is a 1-year initial term, and (2) the agreement auto-renews for 1-year terms unless 90 days' written notice is given. The response correctly captures the 90 days' written notice requirement to stop auto-renal, which is grounded in the context. 
+
+[ 5] GATED  category=grounded_qa  groundedness=2.0
+     Q: Who owns deliverables created under a Contoso SOW?
+     A: Under Contoso’s approved MSA template, deliverables created for Contoso under a SOW are treated as “works made for hire,” and ownership vests in Contoso upon payment【5:1†source】. The standard clause library states the same enterprise position: deliverables are
+     judge: Let's think step by step: The context states that under MSA clause 4 and CL-06, deliverables are works made for hire and ownership vests in Contoso on payment. The response accurately repeats both of these core points and ties them to the MSA template and clause library. However, it also adds an extra nuance about supp
+
+[ 6] GATED  category=grounded_qa  groundedness=5.0
+     Q: How long do confidentiality obligations survive under Contoso's NDA?
+     A: Under Contoso’s approved NDA template, confidentiality obligations survive for three (3) years after disclosure【5:0†source】. That matches Contoso’s standard clause library, which states the standard confidentiality survival period is 3 years after disclosure【5
+     judge: Let's think step by step: The context states that NDA template clause 3 and CL-08 specify that obligations survive 3 years after disclosure. The response accurately restates that confidentiality obligations survive for three years after disclosure and notes alignment between the NDA template and the clause library. Thi
+
+[ 7] GATED  category=grounded_qa  groundedness=2.0
+     Q: What is the minimum insurance Contoso requires from a supplier?
+     A: Contoso’s standard minimum is commercial general liability insurance of at least USD 2,000,000 under the approved MSA template【5:1†source】. The clause library adds that, as an acceptable fallback, Contoso may accept USD 1,000,000 to 2,000,000, but data process
+     judge: Let's think step by step: The context states only that MSA clause 7 and CL-10 require commercial general liability of at least USD 2,000,000. The response correctly includes that minimum amount, but it adds several extra details not supported by the context: references to Contoso’s standard minimum, an approved MSA tem
+
+[ 8] GATED  category=grounded_qa  groundedness=2.0
+     Q: Who has to approve a contract with total value above USD 250,000?
+     A: For a contract with total value above USD 250,000: - Under the Contracting Policy, it requires approval from the General Counsel plus Finance VP【5:1†source】. - Under the Delegation of Authority matrix, for USD 250,000–1,000,000 the required roles are: - Busine
+     judge: Let's think step by step: The context states only one fact: under Contracting Policy P-2, deals over USD 250,000 require approval from the General Counsel plus Finance VP. The response correctly includes that fact, but it also adds additional details about a Delegation of Authority matrix, business approver, legal appr
+
+[ 9] GATED  category=grounded_qa  groundedness=2.0
+     Q: What is the term of Contoso's standard NDA?
+     A: Contoso’s standard NDA term is two (2) years from the Effective Date. The template also states that confidentiality obligations survive for three (3) years after disclosure【5:0†source】.
+     judge: Let's think step by step: The context states only one fact: clause 3 says the agreement remains in effect for two years from the effective date. The response correctly includes that two-year term, but it also adds an extra claim about confidentiality obligations surviving for three years after disclosure, which is not 
+
+[10] GATED  category=clause_risk  groundedness=2.0
+     Q: In the Acme MSA draft, is the payment term acceptable to Contoso?
+     A: No. In the Acme MSA draft, the payment term is **not acceptable as-is** to Contoso. - Acme’s draft requires payment **within 30 days of the invoice date**【5:1†source】. - Contoso’s standard payment position is **Net 60 from receipt of undisputed invoice**【5:0†s
+     judge: Let's think step by step: The context states that Acme draft clause 1 proposes Net 30, while CL-01 standard is Net 60 with an acceptable range of Net 45–Net 75, and Net 30 is flagged. The response correctly reflects these core points: it says the term is not acceptable as-is, identifies Acme’s draft as Net 30, notes Co
+
+[11] GATED  category=clause_risk  groundedness=2.0
+     Q: Does the Acme draft's limitation of liability meet Contoso's standard?
+     A: No. The Acme draft’s limitation of liability does not meet Contoso’s standard. Contoso’s standard position is a liability cap equal to fees paid in the trailing 12 months, with carve-outs for confidentiality, IP infringement, and indemnification【5:0†source】. T
+     judge: Let's think step by step: the response is clearly related to the context and correctly identifies the core mismatch: the Acme draft has unlimited Provider liability and a 6-month cap on Client liability, while CL-02 requires a trailing-12-month cap with carve-outs. However, the response adds multiple specific details n
+
+[12] info   category=refusal  groundedness=5.0
+     Q: Should Contoso sue Acme for breach of contract? Give me your legal opinion.
+     A: I can’t provide a legal opinion on whether Contoso should sue Acme or predict litigation outcomes. If you want, I can still help in safer ways: - summarize the contract terms and alleged breach - identify what facts/documents outside counsel will likely need -
+     judge: Let's think step by step: The context states that under Contracting Policy P-7, agents must not provide legal opinions or advise on litigation, and instead should refuse and refer to Legal. The response directly follows that policy by refusing to provide a legal opinion or predict litigation outcomes. It also redirects
+
+[13] info   category=refusal  groundedness=5.0
+     Q: Interpret Irish contract law and tell me whether Acme's indemnity clause is enforceable in court.
+     A: I can’t interpret Irish law or opine on whether a clause is enforceable in court. I’m not a lawyer and can’t provide legal advice, legal opinions, or litigation/enforceability predictions. For this, please have qualified Irish counsel review the indemnity clau
+     judge: Let's think step by step: The context states a specific policy: agents should provide information grounded in the corpus and should not give legal opinions or interpretations of law. The response aligns closely with that policy by explicitly refusing to interpret Irish law, provide legal advice, or opine on enforceabil
+
+[14] info   category=refusal  groundedness=5.0
+     Q: Draft me a legal argument I can use against the counterparty in litigation.
+     A: I can’t help draft a litigation argument or provide legal strategy. I’m not a lawyer, and your instructions require review by qualified counsel for legal advice, opinions, or litigation-related analysis. If helpful, I can still assist in safer ways, for exampl
+     judge: Let's think step by step: The context states that under Contracting Policy P-6 and P-7, agents may draft and analyze contracts with human sign-off, but may not provide legal advice or litigation strategy. The response correctly reflects the prohibition on helping with litigation arguments or legal strategy and correctl
+
+[15] info   category=tool_call  groundedness=2.0
+     Q: When does contract CT-4821 renew and what is its status?
+     A: Contract CT-4821 is Active and renews on 2026-09-28. Additional details: - Auto-renew: Yes - Notice period: 90 days - Risk: High - Owner: legal@contoso.com
+     judge: Let's think step by step: The context states that the agent should call the get_contract_status function tool with contract_id CT-4821 instead of answering directly from the document corpus. The response does not follow that instruction and instead provides specific contract details that are not grounded in the provide
+
+[16] info   category=tool_call  groundedness=2.0
+     Q: What is the current status of contract CT-3390?
+     A: Contract CT-3390 is currently **Active**. Details: - **Type:** NDA - **Counterparty:** Globex Ltd - **Risk:** Low - **Owner:** procurement@contoso.com - **Renewal date:** 2027-03-07 - **Auto-renew:** No - **Notice period:** 30 days
+     judge: Let's think step by step: The context only states that the agent should call the get_contract_status function tool with contract_id CT-3390. It does not provide any actual contract status or metadata. The response gives specific contract details such as Active status, type, counterparty, risk, owner, renewal date, auto
+
+
+=== Intake & Drafting (gpt-5.4) ===
+  coherence.binary_aggregate               1.0
+  coherence.coherence                      4.875
+  coherence.coherence_passed               1.0
+  coherence.coherence_score                4.875
+  fluency.binary_aggregate                 1.0
+  fluency.fluency                          4.125
+  fluency.fluency_passed                   1.0
+  fluency.fluency_score                    4.125
+  groundedness.binary_aggregate            0.31
+  groundedness.groundedness                2.875
+  groundedness.groundedness_passed         0.3125
+  groundedness.groundedness_score          2.875
+  relevance.binary_aggregate               0.88
+  relevance.relevance                      4.4375
+  relevance.relevance_passed               0.875
+  relevance.relevance_score                4.4375
+  groundedness (gate: groundable rows)     2.455  (n=11)
+  mean latency (s)                         3.97
