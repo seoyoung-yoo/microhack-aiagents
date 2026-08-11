@@ -250,7 +250,8 @@ azd up                  # answer: environment name (e.g. clm-microhack), your su
 ```
 
 It provisions for **5–10 minutes**, assigns the RBAC roles the later challenges need, creates the
-`clm-search` Foundry IQ connection, and runs the `postprovision` hook (`src/scripts/write_env.py`) to
+`clm-search` Search connection, the `clm-knowledge-mcp` Foundry IQ connection, and runs the
+`postprovision` hook (`src/scripts/write_env.py`) to
 **write your `.env` automatically** — so you can skip Step 3b above. Add Azure SQL with
 `azd env set DEPLOY_SQL true` (+ `azd env set SQL_ADMIN_PASSWORD '<StrongP@ssw0rd!>'`) or Bing web
 grounding with `azd env set DEPLOY_BING true` before `azd up`.
@@ -330,14 +331,15 @@ Path B (local-PDF) — it needs no SharePoint, no admin consent, and works in ev
 >    python src/scripts/seed_corpus.py
 >    ```
 >    You should see `· SharePoint settings not set — using the LOCAL-PDF fallback` followed by
->    `✓ uploaded 14/14 local PDF(s) into 'clm-corpus'`. *(This needs the **Search Index Data
+>    `✓ uploaded 14/14 local PDF(s) into 'clm-corpus'`, then confirmations for knowledge source
+>    **`clm-corpus-ks`** and knowledge base **`clm-contracts-kb`**. *(This needs the **Search Index Data
 >    Contributor** role, which provisioning already granted you — if a doc fails, wait a minute for
 >    role propagation and re-run; the script is idempotent.)*
 > 3. Confirm a **non-zero document count** (Azure Portal → Search service → Indexes → `clm-corpus`), then
 >    **jump to [Task 6](#task-6--smoke-test).**
 >
-> **This has zero impact on Challenges 2–6** — the agents only ever read the `clm-corpus` index,
-> never SharePoint directly. Both paths produce the identical index.
+> **This has zero impact on Challenges 2–6** — Foundry IQ reads the same `clm-corpus` index through
+> `clm-corpus-ks`, never SharePoint directly. Both paths produce the identical knowledge base.
 
 <details>
 <summary><strong>Path A — SharePoint corpus (optional · advanced · tenant admins only)</strong></summary>
@@ -364,44 +366,6 @@ Path B (local-PDF) — it needs no SharePoint, no admin consent, and works in ev
 > (so `AZURE_SEARCH_ENDPOINT` is set). The script is **idempotent** — safe to re-run — and takes
 > flags `--dry-run` (preview only), `--skip-upload`, `--skip-index`, and
 > `--site-url https://<tenant>.sharepoint.com/sites/<name>` (to reuse a site you already have).
-
-</details>
-
-<details>
-<summary><strong>Path C — coach / tenant-admin pre-consent (shared tenant · participants are NOT admins)</strong></summary>
-
-Running in a **shared tenant** where participants **aren't** tenant admins? Then Path A's
-automatic admin consent can't run — and, importantly, **the lab deploy can't grant it for you
-either.** Consenting to Microsoft Graph *application* permissions (`Sites.ReadWrite.All`,
-`Files.Read.All`) is a **directory-plane** action that needs a directory role (Global
-Administrator / Privileged Role Administrator / Application Administrator). Azure **`Owner`** on
-the subscription — the most `deploy-lab.ps1` is ever guaranteed — is a *resource*-plane role and does **not**
-include directory consent, so it's neither in the Bicep nor grantable via `AllowedEntraUserIds`.
-
-The fix: a **tenant admin does the consent once** and shares one app with the whole room.
-
-1. **Admin (once):** register the app, add both Graph permissions, **grant admin consent**, and
-   mint a secret — the helper does all of it:
-   ```bash
-   pwsh src/scripts/setup_sharepoint_app.ps1        # Windows / PowerShell
-   # — or —
-   bash src/scripts/setup_sharepoint_app.sh         # Codespaces / Linux / macOS
-   ```
-   Create (or pick) **one** shared SharePoint site + **Documents** library and upload the 14
-   corpus PDFs once: `python src/scripts/upload_corpus_to_sharepoint.py`.
-2. **Admin → participants:** hand out the five `SHAREPOINT_*` values (site URL, library, tenant
-   id, app id, **secret**). One admin-consented app is shared by everyone — participants do **not**
-   each need consent.
-3. **Each participant:** paste those values into `.env`, then build *their own* index against the
-   shared library (skip the upload — the admin already did it):
-   ```bash
-   python src/scripts/seed_corpus.py
-   ```
-   Each participant's Foundry + Search resources are their own; only the SharePoint corpus is
-   shared. The indexer signs in as the shared app (app-only), so no per-user consent is involved.
-
-Prefer no shared secret, or no admin on hand? Use **Path B** — the local-PDF fallback needs
-neither SharePoint nor consent and produces the identical `clm-corpus` index.
 
 </details>
 
