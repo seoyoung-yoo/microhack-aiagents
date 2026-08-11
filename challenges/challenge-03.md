@@ -78,10 +78,6 @@ python src/tracing_setup.py
 Run an agent now, then view spans in the Foundry portal — New Foundry: Build → your agent/model → Monitor; classic: project → Tracing.
 ```
 
-> 📸 **Screenshot slot:** the "Tracing enabled" confirmation.
->
-> <img src="../images/challenge-03/steps/01-tracing-on.png" alt="Screenshot slot: tracing enabled" width="75%">
-
 ### Task 2 · Generate traffic (~15 min)
 
 **One-time — connect Application Insights to your project.** The portal's tracing/monitoring views only
@@ -90,8 +86,6 @@ resource in Challenge 1 is not enough on its own. The click-path depends on whic
 
 - **New Foundry** (the **New Foundry** toggle is **on** — the redesigned UI most people now land in): there is **no** project-level *Tracing* menu item. Open **Build → your agent or model → the `Monitor` tab** and, if prompted, connect Application Insights. Tip: you can jump straight there by typing **"Tracing"** or **"Monitor"** in the portal **search bar** (this is how you reach it when the left nav has no Tracing entry).
 - **Classic Foundry**: open your **project → Tracing** (or **Observability → Tracing**) and click **Connect**, then pick `clm-appinsights`.
-
-*(Fresh `azd up` / `deploy.ps1` / `deploy.sh` deployments now create this connection for you — this step is only needed if the view still shows "connect a resource".)*
 
 Then run any agent demo — each one enables tracing itself, so a normal run emits spans:
 ```bash
