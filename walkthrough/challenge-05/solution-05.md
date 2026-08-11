@@ -157,6 +157,54 @@ def _conversation_reference():
     )
 ```
 
+**Register your own single-tenant app + secret (the concrete clicks):**
+
+1. **Entra ID → App registrations → + New registration.**
+
+   <img src="../../images/challenge-05/steps/task6-app-registration-new.png" alt="Azure portal App registrations blade with the + New registration button highlighted; the Owned applications tab lists no apps yet" width="80%">
+
+2. **Name it** (e.g. `clm-contract-agent-app`) and set **Supported account types = Single tenant only**, then **Register**. Single-tenant matters — the capture bot scopes token validation to *your* tenant via `MICROSOFT_APP_TENANT_ID`.
+
+   <img src="../../images/challenge-05/steps/task6-register-app-form.png" alt="Register an application form with Name set to clm-contract-agent-app and Supported account types set to Single tenant only - Contoso, Register button at the bottom" width="70%">
+
+3. **Copy the two IDs** from the app's **Overview**: **Application (client) ID** → `MICROSOFT_APP_ID`, **Directory (tenant) ID** → `MICROSOFT_APP_TENANT_ID`.
+
+   <img src="../../images/challenge-05/steps/task6-app-overview-ids.png" alt="App registration Overview with the Application (client) ID and Directory (tenant) ID boxed in red; Supported account types reads My organization only" width="80%">
+
+4. **Certificates & secrets → Client secrets → + New client secret.** Copy the generated **Value** immediately (it's shown only once) → that's `MICROSOFT_APP_PASSWORD`.
+
+   <img src="../../images/challenge-05/steps/task6-new-client-secret.png" alt="Certificates and secrets blade on the Client secrets tab with the + New client secret button highlighted and no secrets created yet" width="80%">
+
+Drop all three values into `.env`. Now give that app a bot that can receive Teams messages:
+
+5. **Create an Azure Bot that reuses the app.** Portal → **Create a resource → Azure Bot**. Set a **Bot handle**, pick your **Resource group**, then under **Microsoft App ID** choose **Type of App = Single Tenant** and **Creation type = Use existing app registration**, and paste the **App ID** + **App tenant ID** from step 3 → **Review + create**.
+
+   <img src="../../images/challenge-05/steps/task6-create-azure-bot.png" alt="Create an Azure Bot Basics tab: Bot handle clm-contract-agent-bot, Resource group rg-clm-microhack, Type of App set to Single Tenant, Creation type set to Use existing app registration, with the App ID and App tenant ID fields populated" width="70%">
+
+6. **Enable the Teams channel.** Open the new bot → **Channels** → under *Available Channels* pick **Microsoft Teams** and save. This is the channel Teams uses to route your "hi" to the capture bot.
+
+   <img src="../../images/challenge-05/steps/task6-enable-teams-channel.png" alt="Azure Bot Channels blade with Microsoft Teams highlighted in the Available Channels list; Direct Line and Web Chat already show a Healthy status" width="80%">
+
+7. **Expose the capture bot with a dev tunnel.** Start the bot locally (`python src/capture_reference_bot.py` listens on port **3978**), but the Bot Service can only reach it over public HTTPS — not `localhost`. A **dev tunnel** gives your local port a public `https://<tunnel>` URL. Codespaces doesn't ship the CLI, so install it, sign in (hosting **requires** a login — `--allow-anonymous` only waives auth for *callers*, not the host), then host port 3978:
+
+   ```bash
+   curl -sL https://aka.ms/DevTunnelCliInstall | bash   # installs to ~/bin and adds it to PATH
+   source ~/.bashrc                                      # or open a new terminal so it finds ~/bin/devtunnel
+   # Windows (PowerShell): winget install Microsoft.devtunnel
+   devtunnel user login                                  # sign in with your Microsoft or GitHub account
+   devtunnel host -p 3978 --allow-anonymous              # copy the https://<tunnel> URL it prints
+   ```
+
+   A healthy install prints the CLI version and tunnel-service details, then keeps running as it hosts the tunnel. Copy the `https://<tunnel>` URL, then set your bot's **Configuration → Messaging endpoint** to `https://<tunnel>/api/messages` and save.
+
+   <img src="../../images/challenge-05/steps/task6-devtunnel-install.png" alt="Codespace terminal showing the Dev Tunnels CLI install commands followed by 'devtunnel CLI installed!' and version 1.0.2014, with the Tunnel service URI, version, and cluster (uks1) printed below" width="80%">
+
+8. **Open your bot in Teams and send one message.** Back on the bot's **Channels** blade, click **Open in Teams** next to the (now Healthy) Microsoft Teams channel — this deep-links you into a 1:1 chat with *your* bot. Send any text (e.g. `hi`); that first inbound activity fires the capture bot's `_on_turn`, which writes `TEAMS_SERVICE_URL` + `TEAMS_CONVERSATION_ID` into `.env`. Those two values are what Task 7 replays to post proactive alerts.
+
+   <img src="../../images/challenge-05/steps/task6-open-in-teams.png" alt="Azure Bot Channels page for clm-contract-agent-bot with the Microsoft Teams channel showing a Healthy status and the Open in Teams link highlighted in the Actions column" width="80%">
+
+That bot — **not** `clm-contract-agent` — is the one you point at your dev tunnel (its **Messaging endpoint**) and message to capture the conversation reference.
+
 ### Task 7 · (Optional) Fire a proactive alert
 The send path uses `adapter.continue_conversation(...)` to post into the saved conversation unprompted:
 ```python
