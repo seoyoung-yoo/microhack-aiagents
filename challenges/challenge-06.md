@@ -77,7 +77,7 @@ Sexual                            2           0    0%
 
 > 📸 **Screenshot slot — what you'll see:** the printed **scorecard table** (and/or `redteam_scorecard.json`).
 >
-> <img src="../images/challenge-06/steps/01-redteam-scorecard.png" alt="Baseline red-team scan scorecard with 0% overall attack success rate" width="80%">
+> <img src="../images/challenge-06/steps/01-redteam-scorecard.png" alt="Baseline red-team scan scorecard with 12.5% overall attack success rate (1 of 8 attacks)" width="80%">
 
 ### Task 2 · Turn up the heat (~10 min)
 
@@ -160,12 +160,22 @@ Then **Next → Review → Create guardrails**, **re-run Tasks 1–3**, and conf
 
 > 💡 **"Should I run it in the Codespace instead?"** No — the **GitHub Action runs on GitHub's runners**, triggered from the **Actions** tab. You *can* dry-run the very same gates locally to check the logic — e.g. `python src/safety_eval.py --gate 0.1 --safety-evals` (add `--dry-run` to skip live calls) in the Codespace terminal — but that's a **local check**, not the continuous gate. Task 5 is specifically about the **automated** CI run.
 
-> 📸 **Screenshot slot — what you'll see:** the **Actions** tab with the eval workflow run (green check = gates passed).
+> 📸 **What you'll see** — the **ci-eval** run in the **Actions** tab: job **`eval-gate` ✓ Success**, with the annotation *"Eval gate running in no-op mode (green check). Live Azure evaluation is out of scope for this lab…"* — proof the gate is wired into CI.
 >
-> <img src="../images/challenge-06/steps/03-actions-run.svg" alt="Screenshot slot: GitHub Actions eval run" width="80%">
+> <img src="../images/challenge-06/steps/03-actions-run.png" alt="GitHub Actions ci-eval run #12 succeeded — eval-gate green in no-op mode" width="80%">
 
 ✅ **You'll know it worked when:** the workflow run shows a **green check** (gates passed) — or a
 **red X** if a regression tripped a gate, which is the whole point.
+
+### 🤔 What did that green no-op actually accomplish?
+
+Fair question — the check is a **deliberate no-op**, and that *is* the point of the task. Here's what you really did:
+
+- **You wired a safety gate into CI.** `ci-eval.yml` will now re-run your Challenge 3 **quality** gate and Challenge 6 **safety** gate **automatically** — nightly and on every manual trigger — and **fail the build** if either regresses.
+- **It "did nothing" today on purpose.** Running the gates *for real* needs an Azure sign-in (project endpoint + credentials). That setup is tenant/org-specific and intentionally **out of scope**, so with no secrets configured the workflow **skips the live steps and reports green**.
+- **Green = the plumbing works.** A team turns it on later by adding the Azure secrets and setting the repo variable `RUN_LIVE_EVAL=true`; from then on it blocks risky merges for real. You built the tripwire — going live is one config change.
+
+**Takeaway:** this is the jump from *"we tested it once"* to *"every future change is checked automatically"* — the thing that makes an agent shippable, not just a demo.
 
 ## ✔️ Success criteria
 

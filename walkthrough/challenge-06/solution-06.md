@@ -57,7 +57,7 @@ Violence                          2           0    0%
 
 > 📸 **Screenshot slot:** the printed **scorecard table** (and/or `redteam_scorecard.json`).
 >
-> <img src="../../images/challenge-06/steps/01-redteam-scorecard.svg" alt="Screenshot slot: red-team scorecard" width="80%">
+> <img src="../../images/challenge-06/steps/01-redteam-scorecard.png" alt="Red-team scorecard table with overall attack success rate by risk category" width="80%">
 
 ### Task 2 · Turn up the heat (attack strategies)
 `--strategies` layers encodings/ciphers and a **composed Base64→ROT13** attack on top of the baseline:
@@ -95,7 +95,7 @@ Guardrails held: 9/10 · defect rate = 10%
 
 > 📸 **Screenshot slot:** the **defect rate line** + PASS/FAIL verdict.
 >
-> <img src="../../images/challenge-06/steps/02-safety-gate.svg" alt="Screenshot slot: safety gate verdict" width="80%">
+> <img src="../../images/challenge-06/steps/02-safety-gate.png" alt="Safety gate verdict: guardrails held 10/10, defect rate 0% — SAFETY GATE PASSED" width="80%">
 
 ### Task 4 · Harden the agent, then re-scan
 Task 4 hardens **two different agents** — keep them straight:
@@ -128,13 +128,15 @@ Task 4 hardens **two different agents** — keep them straight:
 2. **Enable the ci-eval workflow** — scheduled workflows are *additionally* **disabled by default in forks**. In **Actions → ci-eval**, click **Enable workflow** (yellow banner); otherwise it never runs (this is the #1 gotcha).
 3. **Trigger** via **Run workflow** (`workflow_dispatch`) or the nightly schedule. With **no Azure secrets set, the job runs and cleanly no-ops (a green check)** — that already satisfies the success criteria, so this path works for **every** attendee.
 
-> 📸 **Screenshot slot:** the **Actions** tab with the eval workflow run (green check = gates passed / no-op).
+> 📸 **What you'll see** — the **ci-eval** run: **`eval-gate` ✓ Success** with the *"Eval gate running in no-op mode (green check)"* annotation.
 >
-> <img src="../../images/challenge-06/steps/03-actions-run.svg" alt="Screenshot slot: GitHub Actions eval run" width="80%">
+> <img src="../../images/challenge-06/steps/03-actions-run.png" alt="GitHub Actions ci-eval run succeeded — eval-gate green in no-op mode" width="80%">
 
 ✅ Green check = gates passed (or no-op); red X = a regression tripped a gate (the whole point).
 
 > 💡 **Codespace vs CI:** the Action runs on **GitHub's runners, not the Codespace**. Running `python src/safety_eval.py --gate 0.1 --safety-evals` (± `--dry-run`) in the Codespace terminal is a valid **local** dry-run of the same gate, but Task 5 is the **automated** CI run — enable the workflow and trigger it from the Actions tab.
+
+> 🤔 **If an attendee asks "did that no-op run actually *do* anything?"** Yes — they **wired the safety gate into CI**. It reports green *without* executing because live evaluation needs an Azure sign-in that's intentionally **out of scope** (no secrets → live steps skipped). The green check proves the gate is in place; a team makes it run for real by adding the Azure secrets and setting the repo variable `RUN_LIVE_EVAL=true`, after which it blocks risky merges automatically.
 
 ## Key files
 

@@ -177,7 +177,7 @@ Retrieving tenants and subscriptions for the selection...
 [Tenant and subscription selection]
 No     Subscription name        Subscription ID                       Tenant
 -----  -----------------------  ------------------------------------  -------------
-[1] *  My Azure Subscription    2942123c-....-793528767894            Contoso
+[1] *  My Azure Subscription    2942123c-....-...                     Contoso
 ```
 
 Then pick the subscription you want to deploy into (replace the id with yours):
@@ -283,25 +283,11 @@ your **`clm-project`** → **Models + endpoints**. Confirm the deployments show 
 
 > 📸 **Screenshot slot — what you'll see:** the three model deployments, all "Succeeded".
 >
-> <img src="../images/challenge-01/steps/08-foundry-deployments.png" alt="Screenshot slot: model deployments" width="80%">
+> <img src="../images/challenge-01/steps/08-foundry-deployments-dark.png" alt="Screenshot slot: model deployments" width="80%">
 
 **4c — Your `.env` file.** In the Codespace file explorer, open **`.env`** at the repo root. Confirm the
 values are filled in (every entry has a value **except** the `SHAREPOINT_*` corpus and the Challenge 5
 `MICROSOFT_APP_*` / `TEAMS_*` variables, which you fill later).
-
-✅ **`.env` should look like this** (values will differ):
-
-```bash
-AZURE_AI_PROJECT_ENDPOINT=https://clmfoundryab12c.services.ai.azure.com/api/projects/clm-project
-MODEL_ORCHESTRATOR=gpt-5.4
-MODEL_DRAFTING=gpt-5.4
-MODEL_CLAUSE_RISK=gpt-5.6-sol
-MODEL_RENEWAL=gpt-5.4-nano
-AZURE_SEARCH_ENDPOINT=https://clmsearchab12c.search.windows.net
-AZURE_SEARCH_INDEX=clm-corpus
-AZURE_SEARCH_CONNECTION_NAME=clm-search
-APPLICATIONINSIGHTS_CONNECTION_STRING=InstrumentationKey=...
-```
 
 > [!CAUTION]
 > For convenience, this hackathon keeps secrets (e.g. the SharePoint app secret) in `.env` and uses
@@ -347,7 +333,7 @@ Path B (local-PDF) — it needs no SharePoint, no admin consent, and works in ev
 >    `✓ uploaded 14/14 local PDF(s) into 'clm-corpus'`. *(This needs the **Search Index Data
 >    Contributor** role, which provisioning already granted you — if a doc fails, wait a minute for
 >    role propagation and re-run; the script is idempotent.)*
-> 3. Confirm a **non-zero document count** (portal → Search service → Indexes → `clm-corpus`), then
+> 3. Confirm a **non-zero document count** (Azure Portal → Search service → Indexes → `clm-corpus`), then
 >    **jump to [Task 6](#task-6--smoke-test).**
 >
 > **This has zero impact on Challenges 2–6** — the agents only ever read the `clm-corpus` index,
