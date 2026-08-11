@@ -116,6 +116,10 @@ and token counts.
 
 ### Task 3 · The `clm_rubric` evaluator — define "good" before you measure (~15 min)
 
+🖥️ **Portal (UI) · no code.** You build the `clm_rubric` evaluator by clicking through the Foundry
+portal — it's the UI twin of `src/evaluators.py`. **Task 4 runs the *same* rubric from code**, so the
+two tasks are one evaluator seen two ways.
+
 Before the scorecard in Task 4 makes sense, meet the metric this challenge is really about:
 **`clm_rubric`**. A **rubric evaluator** is Foundry's *recommended primary measure* of agent
 quality: an LLM judge scores each response against weighted, domain-specific **dimensions you
@@ -139,7 +143,20 @@ thing in the portal — no code — so a non-engineer can own the quality bar.
    `evaluation_dataset.jsonl` (upload it as the data source). Each row gets a weighted
    score, a pass/fail label, and the judge's **reason** per dimension.
 
+**Run it against the agent (New Foundry, no dataset upload).** To score the **live agent**
+over its recent traces instead of a static file, use the redesigned **Evaluations** hub:
+1. **Evaluation → Evaluations → Create** (top-right).
+2. **Target: Agent** → pick your published **`intake-drafting-agent`** (the version you
+   published in Challenge 2) → **Next**.
+3. **Data → Existing traces** → set the **Number of traces**, a **Time range** and
+   **Intelligent sampling** (telemetry takes a few minutes to appear, so pad your window).
+4. **Criteria → Add evaluators** → under the **Custom** group, select **`ClmRubricEvaluator`**
+   (add the built-in judges too for a full scorecard).
+5. **Review** → name the run → **Submit**, then open it for the per-dimension `clm_rubric`
+   scores and the judge's reasons.
+
 > 📸 **Screenshot slot:** your rubric evaluator's per-dimension scores in the portal.
+> <img src="../images/challenge-03/steps/03-rubric-evaluator.png" alt="Screenshot slot: rubric evaluator per-dimension scores" width="75%">
 
 **Continuous evaluation (optional):** once the rubric reflects your bar, enable
 **continuous/scheduled evaluation** in **Monitor settings** so live agent traffic is scored
@@ -150,6 +167,9 @@ Docs: [Rubric evaluators](https://learn.microsoft.com/azure/foundry/concepts/eva
 · [Custom evaluators](https://learn.microsoft.com/azure/foundry/concepts/evaluation-evaluators/custom-evaluators)
 
 ### Task 4 · Run the evaluation (~10 min)
+
+💻 **Code · your terminal.** This runs the *same* `clm_rubric` you built in the portal in Task 3 — now
+over the full 16-row dataset from code.
 
 Run it over the 16-row dataset (`src/data/evaluation/evaluation_dataset.jsonl`):
 ```bash
