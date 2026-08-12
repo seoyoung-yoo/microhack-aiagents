@@ -44,4 +44,5 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
     CMD curl -s -o /dev/null "http://127.0.0.1:${MCP_PORT}/mcp" || exit 1
 
+# Run the Challenge 4 MCP server over streamable HTTP on :8000.
 CMD ["python", "src/mcp_server/server.py", "--http"]
